@@ -1,0 +1,60 @@
+const img = (name) => `https://www.themealdb.com/images/ingredients/${encodeURIComponent(name)}.png`;
+
+export const products = [
+  { id: 1, name: "Mango Tree", type: "tree", price: 350, stock: 18, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/MangoTree.jpg", tag: "Fruit Plant" },
+  { id: 2, name: "Lemon Tree", type: "tree", price: 250, stock: 24, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/A%20lemon%20tree.jpg", tag: "Citrus Plant" },
+  { id: 3, name: "Guava Tree", type: "tree", price: 299, stock: 20, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/GUAVA%20TREE.jpg", tag: "Fruit Plant" },
+  { id: 4, name: "Pomegranate Tree", type: "tree", price: 399, stock: 16, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/Pomegranate%20Tree.jpg", tag: "Fruit Plant" },
+  { id: 5, name: "Coconut Plant", type: "tree", price: 349, stock: 15, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/CoconutTree.jpg", tag: "Tropical Plant" },
+  { id: 6, name: "Neem Tree", type: "tree", price: 199, stock: 30, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/NEEM%20TREE.jpg", tag: "Medicinal" },
+  { id: 7, name: "Fig Plant", type: "tree", price: 329, stock: 17, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/Fig%20Tree.jpg", tag: "Fruit Plant" },
+  { id: 8, name: "Dragon Fruit Plant", type: "tree", price: 279, stock: 22, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/Dragon%20fruit%20plant.jpg", tag: "Fruit Plant" },
+  { id: 9, name: "Amla Plant", type: "tree", price: 225, stock: 20, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/Amla%20tree.jpg", tag: "Indian Fruit Plant" },
+  { id: 10, name: "Papaya Plant", type: "tree", price: 149, stock: 28, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/Papaya%20Tree.jpg", tag: "Fast Fruit Plant" },
+  { id: 11, name: "Custard Apple Plant", type: "tree", price: 275, stock: 18, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/Custard%20apple%20%28tree%29.jpg", tag: "Fruit Plant" },
+  { id: 12, name: "Drumstick Plant", type: "tree", price: 175, stock: 30, unit: "plant", image: "https://commons.wikimedia.org/wiki/Special:FilePath/Moringa%20Tree.jpg", tag: "Home Garden" },
+
+  { id: 101, name: "Apple", type: "fruit", price: 180, stock: 100, unit: "kg", step: 0.5, image: img("apple"), tag: "Fresh Fruit", discount: { min: 2, price: 170 } },
+  { id: 102, name: "Mango", type: "fruit", price: 92, stock: 100, unit: "kg", step: 0.5, image: img("mango"), tag: "Fresh Fruit", discount: { min: 2, price: 85 } },
+  { id: 103, name: "Banana", type: "fruit", price: 55, stock: 150, unit: "kg", step: 0.5, image: img("banana"), tag: "Fresh Fruit", discount: { min: 2, price: 49 } },
+  { id: 104, name: "Orange", type: "fruit", price: 75, stock: 120, unit: "kg", step: 0.5, image: img("orange"), tag: "Fresh Fruit", discount: { min: 2, price: 68 } },
+  { id: 105, name: "Pomegranate", type: "fruit", price: 150, stock: 80, unit: "kg", step: 0.5, image: img("pomegranate"), tag: "Fresh Fruit", discount: { min: 2, price: 140 } },
+  { id: 106, name: "Guava", type: "fruit", price: 65, stock: 100, unit: "kg", step: 0.5, image: img("guava"), tag: "Fresh Fruit", discount: { min: 2, price: 58 } },
+  { id: 107, name: "Grapes", type: "fruit", price: 125, stock: 70, unit: "kg", step: 0.5, image: img("grapes"), tag: "Fresh Fruit", discount: { min: 2, price: 115 } },
+  { id: 108, name: "Pineapple", type: "fruit", price: 40, stock: 60, unit: "kg", step: 0.5, image: img("pineapple"), tag: "Fresh Fruit", discount: { min: 2, price: 35 } },
+  { id: 109, name: "Watermelon", type: "fruit", price: 30, stock: 60, unit: "kg", step: 0.5, image: img("watermelon"), tag: "Fresh Fruit", discount: { min: 2, price: 27 } },
+  { id: 110, name: "Papaya", type: "fruit", price: 40, stock: 80, unit: "kg", step: 0.5, image: img("papaya"), tag: "Fresh Fruit", discount: { min: 2, price: 36 } },
+  { id: 111, name: "Pear", type: "fruit", price: 125, stock: 90, unit: "kg", step: 0.5, image: img("pear"), tag: "Fresh Fruit", discount: { min: 2, price: 115 } },
+  { id: 112, name: "Sweet Lime", type: "fruit", price: 45, stock: 90, unit: "kg", step: 0.5, image: img("lime"), tag: "Fresh Fruit", discount: { min: 2, price: 40 } },
+  { id: 113, name: "Sapota", type: "fruit", price: 50, stock: 70, unit: "kg", step: 0.5, image: img("sapodilla"), tag: "Fresh Fruit", discount: { min: 2, price: 45 } },
+  { id: 114, name: "Custard Apple", type: "fruit", price: 58, stock: 60, unit: "kg", step: 0.5, image: img("custard apple"), tag: "Seasonal Fruit", discount: { min: 2, price: 52 } },
+
+  { id: 201, name: "Tomato", type: "vegetable", price: 32, stock: 150, unit: "kg", step: 0.5, image: img("tomato"), tag: "Vegetable", discount: { min: 2, price: 29 } },
+  { id: 202, name: "Potato", type: "vegetable", price: 34, stock: 150, unit: "kg", step: 0.5, image: img("potatoes"), tag: "Vegetable", discount: { min: 2, price: 31 } },
+  { id: 203, name: "Onion", type: "vegetable", price: 62, stock: 140, unit: "kg", step: 0.5, image: img("onion"), tag: "Vegetable", discount: { min: 2, price: 58 } },
+  { id: 204, name: "Carrot", type: "vegetable", price: 58, stock: 100, unit: "kg", step: 0.5, image: img("carrot"), tag: "Vegetable", discount: { min: 2, price: 52 } },
+  { id: 205, name: "Beetroot", type: "vegetable", price: 48, stock: 90, unit: "kg", step: 0.5, image: img("beetroot"), tag: "Vegetable", discount: { min: 2, price: 43 } },
+  { id: 206, name: "Capsicum", type: "vegetable", price: 58, stock: 90, unit: "kg", step: 0.5, image: img("green pepper"), tag: "Vegetable", discount: { min: 2, price: 52 } },
+  { id: 207, name: "Brinjal", type: "vegetable", price: 42, stock: 100, unit: "kg", step: 0.5, image: img("aubergine"), tag: "Vegetable", discount: { min: 2, price: 38 } },
+  { id: 208, name: "Cucumber", type: "vegetable", price: 33, stock: 100, unit: "kg", step: 0.5, image: img("persian_cucumber"), tag: "Vegetable", discount: { min: 2, price: 30 } },
+  { id: 209, name: "Lady's Finger", type: "vegetable", price: 42, stock: 90, unit: "kg", step: 0.5, image: img("okra"), tag: "Vegetable", discount: { min: 2, price: 38 } },
+  { id: 210, name: "Cauliflower", type: "vegetable", price: 40, stock: 80, unit: "kg", step: 0.5, image: img("cauliflower"), tag: "Vegetable", discount: { min: 2, price: 36 } },
+  { id: 211, name: "Cabbage", type: "vegetable", price: 32, stock: 100, unit: "kg", step: 0.5, image: img("cabbage"), tag: "Vegetable", discount: { min: 2, price: 29 } },
+  { id: 212, name: "Green Chilli", type: "vegetable", price: 65, stock: 70, unit: "kg", step: 0.25, image: img("chilli"), tag: "Vegetable", discount: { min: 1, price: 60 } },
+  { id: 213, name: "Bottle Gourd", type: "vegetable", price: 34, stock: 70, unit: "kg", step: 0.5, image: img("bottle gourd"), tag: "Vegetable", discount: { min: 2, price: 30 } },
+  { id: 214, name: "Bitter Gourd", type: "vegetable", price: 46, stock: 70, unit: "kg", step: 0.5, image: img("bitter gourd"), tag: "Vegetable", discount: { min: 2, price: 41 } },
+  { id: 215, name: "Pumpkin", type: "vegetable", price: 24, stock: 80, unit: "kg", step: 0.5, image: img("pumpkin"), tag: "Vegetable", discount: { min: 2, price: 21 } },
+  { id: 216, name: "Radish", type: "vegetable", price: 38, stock: 70, unit: "kg", step: 0.5, image: img("radish"), tag: "Vegetable", discount: { min: 2, price: 34 } },
+  { id: 217, name: "Ridge Gourd", type: "vegetable", price: 44, stock: 70, unit: "kg", step: 0.5, image: img("ridge gourd"), tag: "Vegetable", discount: { min: 2, price: 39 } },
+  { id: 218, name: "Drumsticks", type: "vegetable", price: 72, stock: 60, unit: "kg", step: 0.5, image: img("drumstick"), tag: "Vegetable", discount: { min: 2, price: 65 } },
+  { id: 219, name: "Green Peas", type: "vegetable", price: 62, stock: 60, unit: "kg", step: 0.5, image: img("peas"), tag: "Vegetable", discount: { min: 2, price: 55 } },
+  { id: 220, name: "French Beans", type: "vegetable", price: 95, stock: 60, unit: "kg", step: 0.5, image: img("green beans"), tag: "Vegetable", discount: { min: 2, price: 88 } },
+  { id: 221, name: "Garlic", type: "vegetable", price: 240, stock: 50, unit: "kg", step: 0.25, image: img("garlic"), tag: "Vegetable", discount: { min: 1, price: 225 } },
+  { id: 222, name: "Ginger", type: "vegetable", price: 110, stock: 60, unit: "kg", step: 0.25, image: img("ginger"), tag: "Vegetable", discount: { min: 1, price: 100 } },
+  { id: 223, name: "Spinach", type: "vegetable", price: 20, stock: 80, unit: "kg", step: 0.5, image: img("spinach"), tag: "Leafy Green", discount: { min: 2, price: 18 } },
+  { id: 224, name: "Sweet Potato", type: "vegetable", price: 43, stock: 70, unit: "kg", step: 0.5, image: img("sweet potatoes"), tag: "Vegetable", discount: { min: 2, price: 38 } }
+];
+
+export function getUnitPrice(product, quantity) {
+  return product.discount && quantity >= product.discount.min ? product.discount.price : product.price;
+}
